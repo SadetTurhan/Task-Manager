@@ -1,18 +1,12 @@
 import { useState } from 'react'
-import { Routes, Route } from "react-router-dom"
 import './App.css'
-import { AuthProvider } from "./utils/auth"
-import LoginForm  from "./components/LoginForm"
-import { ProfilePage } from "../src/components/ProfilePage"
+import { LoginForm } from "./components/LoginForm"
 function App() {
 
   return (
-    <AuthProvider>
-   <Routes>
-      <Route path="/" element={<LoginForm />} />
-      <Route path="/profile" element={<ProfilePage />} />
-   </Routes>
-   </AuthProvider>
+    <>
+      <LoginForm />
+    </>
   )
 }
 
